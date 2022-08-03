@@ -1,0 +1,26 @@
+html {
+    font-family: 'open sans', sans-serif;
+}
+
+.page-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: slategrey;
+    color: orangered;
+}
+
+.game-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.new-game-button {
+    border-radius: 15px;
+    height: 40px;
+    width: 110px;
+    background-color: lightblue;
+    color: orangered;
+    border: solid 5px;
+    border-color: grey;
+}
