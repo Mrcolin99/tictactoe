@@ -2,9 +2,6 @@ html {
     font-family: 'open sans', sans-serif;
 }
 
-.h1 { 
-}
-
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -46,6 +43,13 @@ html {
     border: brown 3px solid;
     height: 75vh;
     width: 21vw;;
+}
+
+.sec5 {
+    border: red 3px solid;
+    height: 10vh;
+    width: 96.5vw;
+    padding: 5px;
 }
 
 .ttt1 {
