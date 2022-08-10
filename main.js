@@ -41,6 +41,7 @@ function suspend(player1, player2) {
 }
 
 function reEnable() {
+    clearSectors()
     overlay.classList.add('hidden')
     game.resetGame(player1, player2)
 }
@@ -55,4 +56,9 @@ function markSector(player) {
     for (var i = 0; i < player.moves.length; i++) {
         ttt[player.moves[i] - 1].innerText = mark
     }
+}
+
+function clearSectors() {
+    for (var i = 0; i < 9; i++)
+    ttt[i].innerText = ''
 }

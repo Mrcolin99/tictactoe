@@ -45,14 +45,5 @@ class Game {
         player1.moves = []
         player2.moves = []
         gameMsg.innerText = `${player1.name}s turn`
-        gameBoard.innerHTML = `<div class="ttt" id="1" sector="1"></div>
-        <div class="ttt" id="2" sector="2"></div>
-        <div class="ttt" id="3" sector="3"></div>
-        <div class="ttt" id="4" sector="4"></div>
-        <div class="ttt" id="5" sector="5"></div>
-        <div class="ttt" id="6" sector="6"></div>
-        <div class="ttt" id="7" sector="7"></div>
-        <div class="ttt" id="8" sector="8"></div>
-        <div class="ttt" id="9" sector="9"></div>`
     }
 }
