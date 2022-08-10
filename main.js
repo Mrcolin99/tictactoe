@@ -15,15 +15,6 @@ startNewGame.addEventListener('click', newGame)
 function clickHandler() {
     game.makeMove(event)
     game.changePlayer()
-    game.winCondition()
-}
-
-function firstWins() {
-    p1Wins.innerText = `${player1.wins++} Wins`
-}
-
-function secondWins() {
-    p2Wins.innerText = `${player2.wins++} Wins`
 }
 
 function newGame() {
