@@ -10,7 +10,7 @@ class Game {
             this.player1Turn = false
             gameMsg.innerText = `${player2.name}s turn`
             player1.checkForWin()
-        } else { 
+        } else {
             this.player1Turn = true
             gameMsg.innerText = `${player1.name}s turn`
             player2.checkForWin()
@@ -19,22 +19,31 @@ class Game {
     }
     makeMove(event) {
         var move = parseInt(event.target.attributes.sector.value)
-        if (this.player1Turn === true) {
+        if (this.player1Turn === true && !player2.moves.includes(move)) {
             player1.moves.push(move)
+            // markSector(event)
             console.log(player1.moves)
-        } else { player2.moves.push(move) }
+        } else if (this.player1Turn === false && !this.player1.moves.includes(move)) {
+            player2.moves.push(move)
+            // markSector(event)
+            console.log(player2.moves)
+        } else { return }
         this.turn++
-        console.log(this.turn)
+        this.changePlayer(player1, player2)
     }
 
     drawGame() {
-        gameMsg.innerText = 'DRAW!'
-        // this.resetGame()
+        if (this.turn >= 9) {
+            gameMsg.innerText = 'DRAW!'
+            suspend(player1, player2)
+        } else { return }
     }
 
-    resetGame(player1) {
+    resetGame(player1, player2) {
         this.turn = 0
         this.player1Turn = true
+        player1.moves = []
+        player2.moves = []
         gameMsg.innerText = `${player1.name}s turn`
         console.log(this.turn)
     }

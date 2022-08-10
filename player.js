@@ -28,6 +28,7 @@ class Player {
           if (this.includesWin(winStates[i], this.moves)) {
             this.wins ++
             this.playerWin()
+            suspend(player1, player2)
             return true
           }
         }
