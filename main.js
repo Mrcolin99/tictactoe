@@ -8,15 +8,20 @@ var gameMsg = document.querySelector('.game-msg')
 var p1Wins = document.querySelector('.p1Wins')
 var p2Wins = document.querySelector('.p2Wins')
 var startNewGame = document.querySelector('.newgame')
+var overlay = document.querySelector('.overlay')
 //Event Listeners
 gameBoard.addEventListener('click', clickHandler)
 startNewGame.addEventListener('click', newGame)
 //Functions
 function clickHandler() {
     game.makeMove(event)
-    game.changePlayer()
+    game.changePlayer(player1, player2)
 }
 
 function newGame() {
     game.resetGame()
+}
+
+function suspend() {
+    
 }
