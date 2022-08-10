@@ -13,7 +13,7 @@ var startNewGame = document.querySelector('.newgame')
 var overlay = document.querySelector('.overlay')
 var ttt = document.querySelectorAll('.ttt')
 //Event Listeners
-window.addEventListener('load', newGame)
+window.addEventListener('load', newGame(player1, player2))
 gameBoard.addEventListener('click', clickHandler)
 startNewGame.addEventListener('click', newGameButton)
 //Functions
@@ -28,15 +28,14 @@ function newGameButton() {
 }
 
 function newGame(player1, player2) {
-    // p1wincounter.innerText = `${player1.name} Wins:`
-    // p2wincounter.innerText = `${player2.name} Wins:`
+    p1wincounter.innerText = `${player1.name} Wins:`
+    p2wincounter.innerText = `${player2.name} Wins:`
     game.drawGame(player1, player2)
 }
 
 function suspend(player1, player2) {
     updateScore(player1, player2)
     overlay.classList.remove('hidden')
-    console.log(overlay)
     setTimeout(reEnable, 3000)
 }
 

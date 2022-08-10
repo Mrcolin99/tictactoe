@@ -22,11 +22,9 @@ class Game {
         if (this.player1Turn === true && !player2.moves.includes(move) && !player1.moves.includes(move)) {
             player1.moves.push(move)
             markSector(player1)
-            console.log(player1.moves)
         } else if (this.player1Turn === false && !this.player1.moves.includes(move) && !player2.moves.includes(move)) {
             player2.moves.push(move)
             markSector(player2)
-            console.log(player2.moves)
         } else { return }
         this.turn++
         this.changePlayer(player1, player2)
