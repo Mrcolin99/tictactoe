@@ -41,17 +41,27 @@ class Game {
     }
     drawGame() {
         gameMsg.innerText = 'DRAW!'
-        this.resetGame()
+        // this.resetGame()
     }
 
     resetGame() {
         this.turn = 0
         this.player1Turn = true
         this.board = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        gameMsg.innerText = ''
+        console.log(this.board)
+        console.log(this.turn)
     }
 
     playerWin() {
-        gameMsg.innerText = 'PLAYER WIN!'
+        if (this.player1Turn === true) {
+            main.firstWins()
+            gameMsg.innerText = 'PLAYER 1 WINS!'
+        } else {
+            main.secondWins()
+            gameMsg.innerText = 'PLAYER 2 WINS!'
+        }
         this.resetGame()
+        
     }
 }
